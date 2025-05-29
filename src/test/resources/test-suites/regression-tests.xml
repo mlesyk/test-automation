@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="API Testing Framework - Regression Tests" parallel="classes" thread-count="5">
+
+    <listeners>
+        <listener class-name="io.qameta.allure.testng.AllureTestNg"/>
+    </listeners>
+
+    <test name="All Tests">
+        <packages>
+            <package name="org.mlesyk.automation.tests.*"/>
+        </packages>
+    </test>
+
+</suite>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="API Testing Framework - Service Tests" parallel="methods" thread-count="3">
+
+    <listeners>
+        <listener class-name="io.qameta.allure.testng.AllureTestNg"/>
+    </listeners>
+
+    <test name="Service Object Model Tests">
+        <classes>
+            <class name="org.mlesyk.automation.tests.UserServiceTest"/>
+            <class name="org.mlesyk.automation.tests.PostServiceTest"/>
+            <class name="org.mlesyk.automation.tests.ServiceIntegrationTest"/>
+        </classes>
+    </test>
+
+</suite>
