@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="API Testing Framework - Smoke Tests" parallel="methods" thread-count="3">
+
+    <listeners>
+        <listener class-name="io.qameta.allure.testng.AllureTestNg"/>
+    </listeners>
+
+    <test name="Framework Setup Verification">
+        <classes>
+            <class name="org.mlesyk.automation.tests.FrameworkSetupTest"/>
+        </classes>
+    </test>
+
+</suite>
