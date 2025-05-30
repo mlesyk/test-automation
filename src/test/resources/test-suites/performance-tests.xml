@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="API Testing Framework - Performance Tests" parallel="false" thread-count="1">
+
+    <listeners>
+        <listener class-name="io.qameta.allure.testng.AllureTestNg"/>
+    </listeners>
+
+    <!-- Performance tests should run sequentially to avoid resource conflicts -->
+    <test name="Performance Testing Suite">
+        <classes>
+            <class name="org.mlesyk.automation.tests.performance.LoadTestSuite"/>
+            <class name="org.mlesyk.automation.tests.performance.StressTestSuite"/>
+            <class name="org.mlesyk.automation.tests.performance.SpikeTestSuite"/>
+            <class name="org.mlesyk.automation.tests.performance.PerformanceIntegrationTest"/>
+        </classes>
+    </test>
+
+</suite>

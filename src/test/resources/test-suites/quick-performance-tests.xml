@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="API Testing Framework - Quick Performance Tests" parallel="false" thread-count="1">
+
+    <listeners>
+        <listener class-name="io.qameta.allure.testng.AllureTestNg"/>
+    </listeners>
+
+    <!-- Quick performance tests for CI/CD -->
+    <test name="Quick Performance Tests">
+        <classes>
+            <class name="org.mlesyk.automation.tests.performance.PerformanceIntegrationTest">
+                <methods>
+                    <include name="testPerformanceBaseline"/>
+                </methods>
+            </class>
+            <class name="org.mlesyk.automation.tests.performance.LoadTestSuite">
+                <methods>
+                    <include name="testBasicLoadTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+</suite>
