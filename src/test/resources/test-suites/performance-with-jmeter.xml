@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="API Testing Framework - Performance Tests with JMeter" parallel="false" thread-count="1">
+
+    <listeners>
+        <listener class-name="io.qameta.allure.testng.AllureTestNg"/>
+    </listeners>
+
+    <test name="Performance Testing Suite with JMeter">
+        <classes>
+            <!-- Original performance tests -->
+            <class name="org.mlesyk.automation.tests.performance.LoadTestSuite"/>
+            <class name="org.mlesyk.automation.tests.performance.StressTestSuite"/>
+            <class name="org.mlesyk.automation.tests.performance.SpikeTestSuite"/>
+
+            <!-- JMeter integration tests -->
+            <class name="org.mlesyk.automation.tests.performance.jmeter.JMeterTestSuite"/>
+            <class name="org.mlesyk.automation.tests.performance.jmeter.JMeterVsK6ComparisonTest"/>
+
+            <!-- Integration tests -->
+            <class name="org.mlesyk.automation.tests.performance.PerformanceIntegrationTest"/>
+        </classes>
+    </test>
+
+</suite>
